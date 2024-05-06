@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+        <section id="login" class="login-main">
+            <div class="login-div-form">
+                <h1>Login</h1>
+                <div class="login-form">
+                    <div>
+                        <label for="txtEmail">Email:</label>
+                        <input type="email" name="txtEmail" id="txtEmail" placeholder="emailtest@gmail.com">
+                    </div>
+                    <div>
+                        <label for="txtPassword">Password:</label>
+                        <input type="password" name="txtPassword" id="txtPassword" placeholder="***********">
+                    </div>
+
+                    <div>
+                        <button id="btnInicioSesion">Iniciar Sesion</button>
+                        <button id="btnCrearCuenta">Crear Cuenta</button>
+                    </div>
+                </div>
+            </div>
+            <div class="login-img">
+                
+            </div>
+        </section>
+
+
+
+        <section id="sectionCrearUsuario" class="login-main" style="display: none;">
+            <div class="login-div-form">
+                <h1>Crear usuario</h1>
+                <div class="login-form">
+                    <div>
+                        <label for="txtFirstName">Nombre:</label>
+                        <input type="text" name="" id="txtFirstName" placeholder="Juan">
+                    </div>
+                    <div>
+                        <label for="txtLastName">Apellido:</label>
+                        <input type="text" name="" id="txtLastName" placeholder="Perez">
+                    </div>
+                    <div>
+                        <label for="txtEmailCU">Email:</label>
+                        <input type="email" name="" id="txtEmailCU" placeholder="emailtest@gmail.com">
+                    </div>
+                    <div>
+                        <label for="txtPasswordCU">Password:</label>
+                        <input type="password" name="" id="txtPasswordCU" placeholder="***********">
+                    </div>
+
+                    <div>
+                        <button id="btnCrear">Crear</button>
+                        <button id="btnVolver">Volver</button>
+                    </div>
+                </div>
+            </div>
+            <div class="login-img">
+
+            </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="js/manejadores/login.js"></script>
+</body>
+
+</html>

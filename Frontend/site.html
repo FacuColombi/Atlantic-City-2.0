@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="real-state-site">
+        <section id="inicio" class="site">
+
+            <nav>
+                <ul>
+                    <li class="active nav-item" id="inicioNav">Inicio</li>
+                    <li class="nav-item" id="verPropiedades">Ver propiedades</li>
+                    <li class="nav-item" id="btnVerPropiedad">Ver propiedad</li>
+                    <li class="nav-item" id="btnAgregarPropiedad">Agregar propiedad</li>
+                    <li class="nav-item" id="btnModificarPropiedad">Modificar propiedad</li>
+                    <li class="nav-item" id="borrarPropiedades">Borrar propiedad</li>
+                    <li class="nav-item" id="btnLogOut">Cerrar sesion</li>
+
+                </ul>
+            </nav>
+
+            <div id="sectionInicio" class="text-inicio contenedor">
+                <h1>Bienvenido User</h1>
+
+                <p>Aquí en nuestra plataforma, te brindamos todas las herramientas necesarias para ayudarte en tu
+                    trabajo diario. A continuación, encontrarás las opciones de navegación disponibles:</p>
+
+                <p><strong>1.Ver Propiedades:</strong> todas las propiedades disponibles en nuestro catálogo. Este
+                    botón te permitirá acceder a una lista completa de propiedades, donde podrás ver detalles como
+                    ubicación, descripción y precio. ¡Encuentra la propiedad perfecta para tus clientes!</p>
+
+                <p><strong>2.Ver Propiedad:</strong> Utiliza esta opción para buscar una propiedad específica.
+                    Podrás ingresar criterios de búsqueda, como ubicación, tipo de propiedad o rango de precios, y
+                    nuestra aplicación te mostrará los resultados correspondientes. Encuentra rápidamente la
+                    propiedad que necesitas para satisfacer las necesidades de tus clientes.</p>
+
+                <p><strong>3.Agregar Propiedad:</strong> Agrega una nueva propiedad al sistema con este botón.
+                    Podrás ingresar todos los detalles relevantes de la propiedad, incluyendo ubicación,
+                    características, imágenes y precio. Asegúrate de proporcionar la información más precisa y
+                    completa para atraer a posibles compradores.</p>
+
+                <p><strong>4.Modificar Propiedad:</strong> Actualiza la información de una propiedad existente
+                    seleccionándola con este botón. Podrás realizar cambios en los detalles de la propiedad, como
+                    descripción, imágenes o precio, para mantenerla actualizada y atractiva para los clientes
+                    interesados. Asegúrate de brindar siempre la información más precisa y actualizada sobre las
+                    propiedades.</p>
+
+                <p><strong>5.Borrar Propiedad:</strong> Si una propiedad ya no está disponible o no es relevante,
+                    puedes eliminarla del sistema utilizando este botón. Selecciona la propiedad que deseas eliminar
+                    y confirma tu decisión. Ten en cuenta que esta acción no se puede deshacer, así que asegúrate de
+                    elegir con cuidado.</p>
+
+                <p>Nuestra aplicación de Inmobiliaria está diseñada específicamente para ayudarte a gestionar
+                    propiedades de manera eficiente y efectiva. Explora, busca, agrega, modifica y elimina
+                    propiedades con facilidad, brindando a tus clientes la mejor experiencia posible. ¡Disfruta de
+                    una experiencia inmobiliaria fluida y exitosa!</p>
+
+            </div>
+
+            <!-- Ver propiedades -->
+            <section id="container-propiedades" class="contenedor">
+                <select id="tipo-propiedad-filtro" class="select-del-site">
+                    <option selected value="">Seleccione tipo</option>
+                    <option value="CASA">CASA</option>
+                    <option value="APARTAMENTO">APARTAMENTO</option>
+                </select>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Departamento</th>
+                            <th>Precio</th>
+                            <th>Descripcion</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblDianmica">
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Borrar propiedades -->
+            <section class="contenedor" id="container-borrar-propiedades">
+                <h1>Borrar propiedades</h1>
+
+                <div style="display: flex; gap: 6px;" >
+                    <select id="borrar-propiedades-select" class="select-del-site">
+                    </select>
+
+                    <button id="borrar-propiedad-btn" class="btn-general">Borrar propiedad</button>
+                </div>
+
+            </section>
+
+            <!-- Ver propiedad -->
+            <section id="container-ver-propiedad" class="contenedor">
+                <div>
+                    <select id="ver-propiedad-select" class="select-del-site">
+                        <option value="0">Seleccione una propiedad...</option>
+                    </select>
+
+                </div>
+
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Descripcion</th>
+                                <th>Localidad</th>
+                                <th>Precio</th>
+                                <th>Habitaciones</th>
+                                <th>Baños</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblVerPropiedad"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Agregar propiedad -->
+            <section id="container-agregar-propiedad" class="contenedor">
+                <div class="form-general">
+                    <div>
+                        <label for="">Tipo de propiedad</label>
+                        <select id="agrTipo">
+                            <option value="CASA">CASA</option>
+                            <option value="APARTAMENTO">APARTAMENTO</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">Descripcion corta</label>
+                        <input type="text" id="agrDescCorta">
+                    </div>
+
+                    <div>
+                        <label for="">Descripcion</label>
+                        <input type="text" id="agrDescripion">
+                    </div>
+
+                    <div>
+                        <label for="">Localidad</label>
+                        <input type="text" id="agrLocalidad">
+                    </div>
+
+                    <div>
+                        <label for="">Precio</label>
+                        <input type="number" id="agrPrecio">
+                    </div>
+
+                    <div>
+                        <label for="">Habitaciones</label>
+                        <input type="number" id="agrHabitaciones">
+                    </div>
+
+                    <div>
+                        <label for="">Baños</label>
+                        <input type="number" id="agrBanios">
+                    </div>
+
+                    <button id="btnEnvAgregarPropiedad" class="btn-general">Agreagr propiedad</button>
+                </div>
+            </section>
+
+            <!-- Modificar propidad -->
+            <section id="container-modificar-propiedad" class="contenedor">
+                <div>
+                    <select id="modificar-propiedad-select" class="select-del-site">
+                        <option value="0">Seleccione una propiedad a modificar...</option>
+                    </select>
+                    
+                    <div class="form-general">
+                        <div>
+                            <label for="">Descripcion corta</label>
+                            <input type="text" id="modificarDescCorta">
+                        </div>
+    
+                        <div>
+                            <label for="">Descripcion</label>
+                            <input type="text" id="modificarDescripion">
+                        </div>
+    
+                        <div>
+                            <label for="">Localidad</label>
+                            <input type="text" id="modificarLocalidad">
+                        </div>
+    
+                        <div>
+                            <label for="">Precio</label>
+                            <input type="number" id="modificarPrecio">
+                        </div>
+    
+                        <div>
+                            <label for="">Habitaciones</label>
+                            <input type="number" id="modificarHabitaciones">
+                        </div>
+    
+                        <div>
+                            <label for="">Baños</label>
+                            <input type="number" id="modificarBanios">
+                        </div>
+    
+                        <button id="btnEnvModificarPropiedad" class="btn-general">Modificar propiedad</button>
+                    </div>
+                </div>
+
+                <div>
+
+                </div>
+            </section>
+
+        </section>
+    </main>
+    <script type="module" src="js/manejadores/site.js"></script>
+</body>
+
+</html>
